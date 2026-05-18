@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git rm *)",
+      "Bash(git config *)",
+      "Bash(git commit -q -m '@ *)",
+      "Bash(rm -rf .idea hello_flutter.iml && echo \"=== git status ===\" && git status && echo \"=== files ===\" && ls -la)"
+    ],
+    "additionalDirectories": [
+      "D:\\Project\\SideProject\\hello-flutter\\.idea"
+    ]
+  }
+}
