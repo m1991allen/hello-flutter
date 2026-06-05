@@ -4,7 +4,25 @@
       "Bash(git rm *)",
       "Bash(git config *)",
       "Bash(git commit -q -m '@ *)",
-      "Bash(rm -rf .idea hello_flutter.iml && echo \"=== git status ===\" && git status && echo \"=== files ===\" && ls -la)"
+      "Bash(rm -rf .idea hello_flutter.iml && echo \"=== git status ===\" && git status && echo \"=== files ===\" && ls -la)",
+      "Bash(gh api *)",
+      "Bash(Select-Object -First 100)",
+      "Bash(flutter devices *)",
+      "Bash(flutter emulators *)",
+      "Bash(claude plugin *)",
+      "Bash(/c/Users/allen.liu/AppData/Local/Android/Sdk/platform-tools/adb.exe devices *)",
+      "Bash(/c/Users/allen.liu/AppData/Local/Android/Sdk/platform-tools/adb.exe -s emulator-5554 shell getprop sys.boot_completed)",
+      "Bash(/c/Users/allen.liu/AppData/Local/Android/Sdk/platform-tools/adb.exe -s emulator-5554 shell getprop init.svc.bootanim)",
+      "PowerShell(Get-Process | Where-Object { $_.ProcessName -match 'qemu|emulator|crashpad' } | Select-Object ProcessName, Id, @{N='RAM\\(MB\\)';E={[math]::Round\\($_.WorkingSet64/1MB\\)}}, StartTime | Format-Table -AutoSize)",
+      "PowerShell(Stop-Process -Name 'qemu-system-x86_64','emulator','crashpad_handler' -Force -ErrorAction SilentlyContinue)",
+      "Read(//c/Users/allen.liu/AppData/Local/Android/Sdk/emulator/**)",
+      "Bash(/c/Users/allen.liu/AppData/Local/Android/Sdk/emulator/emulator.exe -list-avds)",
+      "Bash(/c/Users/allen.liu/AppData/Local/Android/Sdk/emulator/emulator.exe -avd Pixel_7 -no-snapshot-load -no-boot-anim)",
+      "Bash(flutter run *)",
+      "Bash(/c/Users/allen.liu/AppData/Local/Android/Sdk/platform-tools/adb.exe -s emulator-5554 exec-out screencap -p)",
+      "PowerShell(Get-Process | Where-Object { $_.ProcessName -match 'qemu|emulator' } | Select-Object ProcessName, Id, @{N='RAM\\(MB\\)';E={[math]::Round\\($_.WorkingSet64/1MB\\)}} | Format-Table -AutoSize)",
+      "PowerShell(Get-Process | Where-Object { $_.ProcessName -match 'qemu|emulator|dart|chrome' } | Select-Object ProcessName, Id, @{N='RAM\\(MB\\)';E={[math]::Round\\($_.WorkingSet64/1MB\\)}} | Format-Table -AutoSize)",
+      "Bash(flutter analyze *)"
     ],
     "additionalDirectories": [
       "D:\\Project\\SideProject\\hello-flutter\\.idea"
