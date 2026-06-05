@@ -158,7 +158,7 @@ class _MyHomePageState extends State<MyHomePage> {
               const SizedBox(width: 10),
               _calcButton('9'),
               const SizedBox(width: 10),
-              _calcButton('+', color: Colors.blue),
+              _calcButton('+', color: Colors.blue[300]),
             ],
           ),
           const SizedBox(height: 10),
@@ -171,7 +171,7 @@ class _MyHomePageState extends State<MyHomePage> {
               const SizedBox(width: 10),
               _calcButton('6'),
               const SizedBox(width: 10),
-              _calcButton('-', color: Colors.blue),
+              _calcButton('-', color: Colors.blue[300]),
             ],
           ),
           const SizedBox(height: 10),
@@ -184,32 +184,35 @@ class _MyHomePageState extends State<MyHomePage> {
               const SizedBox(width: 10),
               _calcButton('3'),
               const SizedBox(width: 10),
-              _calcButton('*', color: Colors.blue),
+              _calcButton('*', color: Colors.blue[300]),
             ],
           ),
           const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              _calcButton('C', color: Colors.red),
+              _calcButton('C', color: Colors.red[200]),
               const SizedBox(width: 10),
               _calcButton('0'),
               const SizedBox(width: 10),
               _calcButton('.'),
               const SizedBox(width: 10),
-              _calcButton('/', color: Colors.blue),
+              _calcButton('/', color: Colors.blue[300]),
             ],
           ),
           const SizedBox(height: 10),
-          // ===== 最下面：等於鍵（加寬）=====
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                width: 310,
-                child: _calcButton('=', color: Colors.green),
-              ),
-            ],
+          // ===== 最下面：等於鍵（佔右側兩排、靠右）=====
+          SizedBox(
+            width: 310, // 跟上面整排按鈕一樣寬（70×4 + 10×3）
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end, // 在這個框內「靠右」
+              children: [
+                SizedBox(
+                  width: 150, // 右側兩排的寬度（70 + 10 + 70）
+                  child: _calcButton('=', color: Colors.grey[700]),
+                ),
+              ],
+            ),
           ),
         ],
       ),
